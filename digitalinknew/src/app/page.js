@@ -191,11 +191,13 @@ export default function Home() {
               className="border-4 rounded-xl bg-white border-[#223029] hover:cursor-crosshair"
               height={canvasDimensions.height}
               width={canvasDimensions.width}
-              onMouseDown={startWriting}
-              onMouseUp={stopWriting}
-              onMouseMove={writing}
               ref={canvasRef}
-            ></canvas>
+              onPointerDown={(e) => e.preventDefault()}
+              onPointerUp={(e) => e.preventDefault()}  
+              onPointerMove={(e) => e.preventDefault()}
+        ></canvas>
+
+
         
 
         <button className="text-base mt-8 h-8 w-28 text-[#223029] font-bold bg-[#fdf0d5] rounded-md hover:bg-[#223029] hover:text-[#fdf0d5] hover:border-2 hover:border-[#fdf0d5]
